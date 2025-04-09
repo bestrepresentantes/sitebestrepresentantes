@@ -197,6 +197,26 @@ footer .social-icons a:hover {
   z-index: 99;
 }
 
+.logos-clientes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.logos-clientes img {
+  height: 60px;
+  object-fit: contain;
+  filter: grayscale(0%);
+  transition: transform 0.3s ease;
+}
+
+.logos-clientes img:hover {
+  transform: scale(1.1);
+}
+
 @media (max-width: 600px) {
   .section-row {
     flex-direction: column;
