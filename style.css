@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f9f9f9;
@@ -7,78 +7,133 @@ body {
 }
 
 header {
-  background-color: #111;
-  color: white;
-  padding: 1.5rem;
-  text-align: center;
+  background-color: #222;
+  color: #fff;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
 }
 
 nav ul {
   list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin: 1rem 0 0 0;
   padding: 0;
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
 }
 
-nav ul li a {
+nav a {
   color: #fff;
   text-decoration: none;
-  font-weight: bold;
-}
-
-nav ul li a:hover {
-  text-decoration: underline;
+  font-weight: 500;
 }
 
 section {
-  padding: 2rem 4%;
-  max-width: 900px;
-  margin: auto;
+  padding: 2rem;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
 }
 
 h2 {
+  margin-top: 0;
+  font-size: 1.6rem;
   color: #222;
-  margin-top: 2rem;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 0.5rem;
 }
 
-ul {
-  padding-left: 1.2rem;
+.section-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background-color: #f0f0f0;
+  padding: 1.2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: start;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+form {
+  max-width: 400px;
+  margin-top: 1rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+button {
+  background-color: #28a745;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
 }
 
 footer {
-  background-color: #eee;
   text-align: center;
   padding: 1rem;
+  background-color: #eee;
   font-size: 0.9rem;
-  margin-top: 3rem;
 }
 
-a {
-  color: #0066cc;
-}
-a:hover {
-  color: #004999;
-}
-
-/* Botão flutuante do WhatsApp */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #25D366;
+  background-color: #25d366;
   color: white;
-  padding: 12px 18px;
+  padding: 10px 16px;
   border-radius: 50px;
   text-decoration: none;
   font-weight: bold;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 99;
 }
 
-.whatsapp-float:hover {
-  background-color: #1ebe5d;
+@media (max-width: 600px) {
+  .section-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+  }
 }
