@@ -82,14 +82,29 @@ h2 {
   margin-top: 1rem;
 }
 
-.logos img {
-  height: 100px;
-  object-fit: contain;
+/* Logos de marcas e clientes */
+.logos, .logos-clientes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
 }
 
+.logos img,
 .logos-clientes img {
-  height: 80px;
+  width: 300px;
+  height: auto;
   object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logos img:hover,
+.logos-clientes img:hover {
+  transform: scale(1.05);
+}
+
 }
 
 .logos-clientes img:hover,
