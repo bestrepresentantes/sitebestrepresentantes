@@ -188,9 +188,12 @@ button, .catalog-button {
 
 .card-rep img {
   width: 100%;
-  height: auto;
+  max-height: 120px; /* Altura bem menor */
+  object-fit: cover;
   border-radius: 8px;
   margin-bottom: 0.8rem;
+}
+
 }
 
 .card-rep h3 {
