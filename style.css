@@ -48,6 +48,7 @@ h2 {
   padding-left: 0.6rem;
 }
 
+/* Sobre / Best Beef / Dália */
 .section-row {
   display: flex;
   flex-wrap: wrap;
@@ -55,6 +56,7 @@ h2 {
   gap: 2rem;
 }
 
+/* Diferenciais */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -70,15 +72,29 @@ h2 {
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-.logos {
+/* Logos de marcas e clientes */
+.logos, .logos-clientes {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   margin-top: 1rem;
 }
 
+.logos-clientes img, .logos img {
+  height: 60px;
+  object-fit: contain;
+  filter: grayscale(0%);
+  transition: transform 0.3s ease;
+}
+
+.logos-clientes img:hover,
+.logos img:hover {
+  transform: scale(1.1);
+}
+
+/* Formulário */
 form {
   max-width: 400px;
   margin-top: 1rem;
@@ -111,6 +127,7 @@ button, .catalog-button {
   background-color: #1da955;
 }
 
+/* Carrossel */
 .carousel {
   display: flex;
   overflow-x: auto;
@@ -136,11 +153,62 @@ button, .catalog-button {
   transform: scale(1.03);
 }
 
-iframe {
-  max-width: 100%;
+/* Vídeo */
+#video video {
+  max-width: 720px;
+  width: 100%;
   border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-top: 1rem;
 }
 
+/* Representantes */
+#representantes {
+  padding: 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.representantes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.card-rep {
+  width: 200px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.card-rep img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+}
+
+.card-rep h3 {
+  font-size: 1rem;
+  margin: 0.4rem 0 0.2rem;
+  color: #222;
+}
+
+.card-rep p {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.card-rep:hover {
+  transform: translateY(-4px);
+}
+
+/* Rodapé */
 footer {
   text-align: center;
   padding: 1.5rem;
@@ -183,6 +251,7 @@ footer .social-icons a:hover {
   background-color: #005dc1;
 }
 
+/* Botão flutuante WhatsApp */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
@@ -197,26 +266,7 @@ footer .social-icons a:hover {
   z-index: 99;
 }
 
-.logos-clientes {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.logos-clientes img {
-  height: 60px;
-  object-fit: contain;
-  filter: grayscale(0%);
-  transition: transform 0.3s ease;
-}
-
-.logos-clientes img:hover {
-  transform: scale(1.1);
-}
-
+/* Responsivo */
 @media (max-width: 600px) {
   .section-row {
     flex-direction: column;
@@ -235,45 +285,9 @@ footer .social-icons a:hover {
   .carousel img {
     width: 100%;
     height: auto;
-    #representantes {
-  padding: 2rem;
-  background-color: #fff;
-  text-align: center;
-}
+  }
 
-.representantes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 1.5rem;
-}
-
-.card-rep {
-  max-width: 260px;
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.card-rep img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
-.card-rep h3 {
-  margin: 0.5rem 0 0.3rem;
-  font-size: 1.2rem;
-  color: #222;
-}
-
-.card-rep p {
-  font-size: 0.95rem;
-  color: #555;
-}
-
+  .card-rep {
+    width: 90%;
   }
 }
