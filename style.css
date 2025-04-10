@@ -235,5 +235,45 @@ footer .social-icons a:hover {
   .carousel img {
     width: 100%;
     height: auto;
+    #representantes {
+  padding: 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.representantes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.card-rep {
+  max-width: 260px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card-rep img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.card-rep h3 {
+  margin: 0.5rem 0 0.3rem;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.card-rep p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
   }
 }
