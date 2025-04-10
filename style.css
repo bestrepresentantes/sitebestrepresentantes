@@ -82,24 +82,25 @@ h2 {
   margin-top: 1rem;
 }
 
+/* Ajuste para logos das marcas (por exemplo, Best Beef e Dália) */
 .logos img {
-  height: 100px;
-  object-fit: contain;
-}
-
-.logos-clientes img {
-  max-height: 40px;
+  width: 300px;
   height: auto;
-  width: auto;
-  margin: 0 10px;
-  padding: 8px 0;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
 
-.logos-clientes img:hover,
-.logos img:hover {
-  transform: scale(1.1);
+/* Ajuste para logos dos clientes (reducidos para metade do tamanho, exemplo: 150px de largura) */
+.logos-clientes img {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logos img:hover,
+.logos-clientes img:hover {
+  transform: scale(1.05);
 }
 
 /* Formulário */
@@ -185,24 +186,14 @@ button, .catalog-button {
   margin-top: 1.5rem;
 }
 
-.card-rep {
-  width: 200px;
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s ease;
-}
-
+/* Ajuste para as fotos dos representantes – Formato Redondo */
 .card-rep img {
   width: 180px;
   height: 180px;
   object-fit: cover;
   border-radius: 50%;
-  margin-bottom: 0.8rem;
+  margin: 0 auto 1rem;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .card-rep h3 {
@@ -304,7 +295,6 @@ footer .social-icons a:hover {
   }
 
   .logos-clientes img {
-    max-height: 30px;
-    margin: 5px;
+    width: 120px;
   }
 }
