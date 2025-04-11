@@ -36,37 +36,50 @@ nav ul li a {
 .section-row {
   flex-direction: column;
   text-align: center;
-  align-items: center; /* Centraliza todo o conteúdo da linha */
-  gap: 1rem; /* Ajusta o espaçamento entre a imagem e o texto */
+  align-items: center; /* Alinha o conteúdo ao centro */
+  gap: 1rem; /* Garante espaçamento adequado entre os elementos */
+  padding: 0 10px; /* Adiciona algum preenchimento lateral */
 }
 
 /* Ajuste de tamanho para os logos */
 .company-logo,
 .brand-logo {
-  max-width: 200px; /* Ajuste para todos os logos ficarem do mesmo tamanho */
+  width: 150px; /* Ajuste para o logo ter o mesmo tamanho dos outros */
   height: auto;
   object-fit: contain;
   display: block;
-  margin: 0 auto; /* Centraliza a imagem */
+  margin: 0 auto; /* Centraliza o logo */
 }
 
-/* Ajuste da imagem da Dália especificamente */
+/* Ajusta a imagem da Dália especificamente */
 #dalia .section-row img {
-  max-width: 180px; /* Tamanho consistente da imagem no mobile */
+  max-width: 150px; /* Tamanho consistente para o logo da Dália */
   height: auto;
+  object-fit: contain;
 }
 
 /* Texto na seção Dália */
 #dalia .section-row p {
-  font-size: 1rem; /* Tamanho de texto para o mobile */
+  font-size: 1rem; /* Ajusta o tamanho do texto */
   color: #333;
   text-align: center;
-  margin-top: 1rem; /* Adiciona um pequeno espaçamento */
+  margin-top: 1rem; /* Adiciona um pequeno espaçamento entre o texto e a imagem */
 }
 
-/* Título menor */
+/* Ajuste para o título da seção sobre */
 header h1 {
   font-size: 1.4rem;
+}
+
+/* Ajustes nos cards e logos de clientes */
+.logos img,
+.logos-clientes img {
+  width: auto;
+  max-width: 80%; /* Garante que o logo não quebre o layout */
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
 }
 
 /* Carrossel full‑width */
@@ -79,11 +92,6 @@ header h1 {
 .card-rep {
   width: 90%;
   margin: 0 auto;
-}
-
-/* Alinha o texto da Dália com a imagem */
-#dalia .section-row {
-  justify-content: center; /* Garante que o conteúdo esteja centralizado */
 }
 
 /* Esconde widget Leadster em telas muito pequenas */
