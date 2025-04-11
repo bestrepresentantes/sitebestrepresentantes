@@ -50,13 +50,15 @@ nav ul li a {
   margin: 0 auto;
 }
 
-/* Ajuste para a imagem da Dália na versão mobile */
-#dalia .section-row img {
-  max-width: 150px; /* Ajusta o tamanho da imagem da Dália */
+/* Ajuste o tamanho do logo da Dália */
+#dalia .brand-logo {
+  max-width: 150px;  /* Ajuste para o logo da Dália com o mesmo tamanho dos outros logos */
   height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 
-/* Texto da seção Dália */
 #dalia .section-row p {
   font-size: 1rem; /* Ajusta o tamanho do texto */
   color: #333;
