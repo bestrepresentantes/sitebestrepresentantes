@@ -52,18 +52,33 @@ nav ul li a {
 
 /* Ajuste do logo da Dália para versão mobile */
 #dalia .brand-logo {
-  width: 20%;  /* Reduz o logo da Dália para 1/5 do tamanho na versão mobile */
+  width: 20% !important;  /* Reduz o logo da Dália para 1/5 do tamanho na versão mobile */
   height: auto;
   object-fit: contain;
   display: block;
   margin: 0 auto;
 }
 
-#dalia .section-row p {
-  font-size: 1rem; /* Ajusta o tamanho do texto */
-  color: #333;
-  text-align: center;
-  margin-top: 1rem; /* Espaço entre o texto e a imagem */
+/* Garantir que a imagem da Dália na seção "Dália Alimentos" não quebre o layout */
+@media (max-width: 768px) {
+  #dalia .brand-logo {
+    width: 20%;  /* Reduz o logo para 1/5 do tamanho */
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+
+  #dalia .section-row {
+    text-align: center;
+  }
+
+  /* Ajuste o texto da Dália para manter o alinhamento */
+  #dalia .section-row p {
+    font-size: 1rem; /* Ajusta o tamanho do texto */
+    color: #333;
+    margin-top: 1rem; /* Espaço entre o texto e a imagem */
+  }
 }
 
 /* Ajuste do título */
@@ -90,14 +105,4 @@ header h1 {
   max-width: 200px;
   height: auto;
   object-fit: contain;
-  margin: 0 auto;
-  display: block;
-}
-
-/* Esconde widget Leadster em telas muito pequenas */
-@media (max-width: 400px) {
-  [id^="neurolead"], 
-  .leadster-widget {
-    display: none !important;
-  }
-}
+  margin:
