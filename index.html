@@ -17,6 +17,18 @@
 
   <!-- CSS para mobile (≤768px) -->
   <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 768px)">
+
+  <!-- Ajuste de largura uniforme para as logos no desktop -->
+  <style>
+    @media screen and (min-width: 769px) {
+      .logos .brand-logo {
+        width: 200px;    /* ajuste conforme sua preferência */
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -59,8 +71,8 @@
   <section id="marcas">
     <h2>Marcas Representadas</h2>
     <div class="logos">
-      <img src="bestbeef.png.png" alt="Best Beef">
-      <img src="imagem-dalia.png" alt="Dália Alimentos">
+      <img src="bestbeef.png.png" alt="Best Beef" class="brand-logo">
+      <img src="imagem-dalia.png" alt="Dália Alimentos" class="brand-logo">
     </div>
   </section>
 
