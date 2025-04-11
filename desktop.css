@@ -20,11 +20,13 @@ header h1 {
   font-size: 1.8rem;
 }
 
+/* esconde o hamburger no desktop */
 .menu-toggle {
   display: none;
 }
 
-nav ul {
+/* usa a classe .nav-list */
+.nav-list {
   list-style: none;
   padding: 0;
   display: flex;
@@ -32,7 +34,7 @@ nav ul {
   margin-top: 0.5rem;
 }
 
-nav a {
+.nav-list a {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
@@ -40,9 +42,20 @@ nav a {
   transition: background 0.2s;
 }
 
-nav a:hover {
+.nav-list a:hover {
   background: rgba(255,255,255,0.1);
   border-radius: 4px;
+}
+
+/* garante tamanho uniforme para logos */
+.company-logo,
+.brand-logo {
+  width: auto;
+  max-width: 200px;  /* ajuste conforme necessidade */
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 
 /* SEÇÕES */
@@ -83,7 +96,7 @@ h2 {
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-/* LOGOS */
+/* LOGOS DE MARCAS E CLIENTES */
 .logos,
 .logos-clientes {
   display: flex;
@@ -94,14 +107,9 @@ h2 {
   margin-top: 1rem;
 }
 
-.logos img {
-  width: 300px;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
+/* caso ainda tenha imagens sem classes específicas */
+.logos img,
 .logos-clientes img {
-  width: 150px;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
@@ -158,13 +166,13 @@ button,
 
 .carousel img {
   width: 300px;
+  height: 200px;
   border-radius: 8px;
   scroll-snap-align: start;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   flex: 0 0 auto;
   transition: transform 0.3s ease;
   object-fit: cover;
-  height: 200px;
 }
 
 .carousel img:hover {
