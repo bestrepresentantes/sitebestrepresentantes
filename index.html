@@ -2,18 +2,142 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Best Representantes</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Fonte Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Seu CSS principal (opcional) -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- CSS de responsividade e menu mobile -->
+  <style>
+    /* Reset básico */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; line-height: 1.5; }
+
+    header {
+      position: relative;
+      background: #000;
+      color: #fff;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header h1 { font-size: 1.5rem; }
+
+    /* Botão hamburger */
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      background: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    nav .nav-list {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+    nav .nav-list li a {
+      color: #fff;
+      text-decoration: none;
+      padding: .5rem;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      nav .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #000;
+      }
+      nav .nav-list.open {
+        display: flex;
+      }
+      nav .nav-list li {
+        border-bottom: 1px solid #333;
+      }
+      nav .nav-list li a {
+        display: block;
+        padding: 1rem;
+      }
+    }
+
+    /* Seções básicas */
+    section {
+      padding: 2rem 1rem;
+    }
+    .section-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+    .section-row img { max-width: 100%; height: auto; }
+    .cards, .logos, .logos-clientes, .representantes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .card, .card-rep, .logos img, .logos-clientes img {
+      flex: 1 1 200px;
+    }
+
+    /* Footer */
+    footer {
+      background: #f5f5f5;
+      padding: 1rem;
+      text-align: center;
+    }
+    .download-buttons {
+      margin-bottom: 1rem;
+    }
+    .download-button {
+      margin: 0 .5rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .social-icons a {
+      margin: 0 .3rem;
+      font-size: 1.2rem;
+      text-decoration: none;
+    }
+
+    /* WhatsApp flutuante */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      background: #25D366;
+      color: #fff;
+      padding: .8rem 1rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+  </style>
 </head>
 <body>
 
   <header>
     <h1>Best Representantes</h1>
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
     <nav>
-      <ul>
+      <ul class="nav-list">
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#servicos">Diferenciais</a></li>
         <li><a href="#marcas">Marcas</a></li>
@@ -29,7 +153,7 @@
   <section id="sobre">
     <h2>Quem Somos</h2>
     <div class="section-row">
-      <img src="logo-bestrepresentantes.png" alt="Logo Best Representantes" width="300">
+      <img src="logo-bestrepresentantes.png" alt="Logo Best Representantes">
       <p>A <strong>Best Representantes</strong> é um escritório especializado na representação comercial de marcas do segmento de proteínas, com foco em bovinos e suínos. Com mais de 30 anos de experiência, liderado por <strong>Teo Edelstein</strong>, nosso compromisso é conectar fornecedores a clientes de alto potencial em Porto Alegre e região metropolitana.</p>
     </div>
   </section>
@@ -48,15 +172,15 @@
   <section id="marcas">
     <h2>Marcas Representadas</h2>
     <div class="logos">
-      <img src="bestbeef.png.png" alt="Best Beef" width="180">
-      <img src="imagem-dalia.png" alt="Dália Alimentos" width="180">
+      <img src="bestbeef.png.png" alt="Best Beef">
+      <img src="imagem-dalia.png" alt="Dália Alimentos">
     </div>
   </section>
 
   <section id="bestbeef">
     <h2>Frigorífico Silva - Best Beef</h2>
     <div class="section-row">
-      <img src="bestbeef.png.png" alt="Logo Best Beef" width="300">
+      <img src="bestbeef.png.png" alt="Logo Best Beef">
       <div>
         <p>O <strong>Frigorífico Silva</strong> é referência nacional em qualidade de carne bovina, com foco em cortes padronizados e certificados, voltados ao mercado premium. Fundado em Santa Maria (RS), é responsável pela marca <strong>Best Beef</strong>, amplamente reconhecida por seus altos padrões de produção e apresentação.</p>
         <p>Mais informações em: <a href="https://www.frigorificosilva.com.br" target="_blank">www.frigorificosilva.com.br</a></p>
@@ -67,7 +191,7 @@
   <section id="dalia">
     <h2>Dália Alimentos</h2>
     <div class="section-row">
-      <img src="imagem-dalia.png" alt="Dália Alimentos" width="300">
+      <img src="imagem-dalia.png" alt="Dália Alimentos">
       <div>
         <p>A <strong>Dália Alimentos</strong> é uma cooperativa agroindustrial fundada em 1947, em Encantado/RS, que atua nos segmentos de carnes suínas, aves, lácteos, industrializados e rações. Sua estrutura verticalizada garante rastreabilidade e qualidade em toda a cadeia.</p>
         <p>Mais informações em: <a href="https://dalia.com.br" target="_blank">www.dalia.com.br</a></p>
@@ -133,7 +257,7 @@
 
   <a class="whatsapp-float" href="https://wa.me/5551991122872" target="_blank">WhatsApp</a>
 
-  <!-- Script do Leadster -->
+  <!-- Leadster -->
   <script>
     (function(a,b,c,d){
       try {
@@ -146,6 +270,17 @@
         e.appendChild(f);
       } catch(g) {}
     })(window, document, "https://cdn.leadster.com.br/neurolead/neurolead.min.js", "OlfuSd0nVFv98zdpXOxKVlln9");
+  </script>
+
+  <!-- Toggle do menu mobile -->
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('.nav-list');
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      navList.classList.toggle('open');
+    });
   </script>
 
 </body>
