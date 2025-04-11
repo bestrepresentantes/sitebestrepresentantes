@@ -2,12 +2,12 @@
    MOBILE (≤768px)
    =========================== */
 
-/* mostra o botão hamburger */
+/* Mostrar o botão hamburger */
 .menu-toggle {
   display: block;
 }
 
-/* esconde o menu padrão e posiciona o off‑canvas */
+/* Esconde o menu padrão e posiciona o off‑canvas */
 nav ul {
   display: none;
   flex-direction: column;
@@ -18,7 +18,7 @@ nav ul {
   left: 0;
 }
 
-/* abre o menu quando a classe .open for adicionada */
+/* Abre o menu quando a classe .open for adicionada */
 nav ul.open {
   display: flex;
 }
@@ -32,72 +32,55 @@ nav ul li a {
   padding: 1rem;
 }
 
-/* empilha as seções */
+/* Empilha as seções */
 .section-row {
   flex-direction: column;
   text-align: center;
+  align-items: center; /* Garante que as imagens e textos fiquem centralizados */
 }
 
-/* título menor */
+/* Ajusta o tamanho das imagens */
+.company-logo,
+.brand-logo {
+  max-width: 80%; /* Ajusta o logo para se alinhar ao tamanho da tela */
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Título menor */
 header h1 {
   font-size: 1.4rem;
 }
 
-/* carrossel full‑width */
+/* Carrossel full‑width */
 .carousel img {
   width: 100%;
   height: auto;
 }
 
-/* cards de representantes mais largos e centralizados */
+/* Cards de representantes mais largos e centralizados */
 .card-rep {
   width: 90%;
   margin: 0 auto;
 }
 
-/* ===========================
-   Ajustes para logos de marca (uniformes)
-   =========================== */
-.company-logo,
-.brand-logo {
-  display: block;
-  margin: 0 auto 1rem;
-  width: auto;
-  max-width: 180px;   /* Todos com a mesma largura, ajustado para 180px */
-  height: auto;
-  object-fit: contain;
-}
-
-/* logos de clientes (menores) */
-.logos-clientes img {
-  display: block;
-  margin: 0 auto 1rem;
-  width: 120px;
-  height: auto;
-  object-fit: contain;
-}
-
-/* ===========================
-   Ajustes para o texto da seção Dália
-   =========================== */
+/* Alinha o texto da Dália com a imagem */
 #dalia .section-row {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: center; /* Garante alinhamento correto da imagem e texto */
   text-align: center;
 }
 
-#dalia .section-row img {
-  max-width: 180px;   /* logo da Dália com o mesmo tamanho */
+/* Texto da Dália */
+#dalia p {
+  margin-top: 1rem; /* Adiciona espaçamento para o texto */
+  font-size: 1rem;
+  color: #333;
+  text-align: center; /* Centraliza o texto */
 }
 
-#dalia .section-row div {
-  width: 90%;   /* largura máxima de 90% */
-  text-align: left; /* Alinha o texto à esquerda */
-  margin-top: 1rem;  /* Distância entre logo e texto */
-}
-
-/* opcional: esconde widget Leadster em telas muito pequenas */
+/* Esconde widget Leadster em telas muito pequenas */
 @media (max-width: 400px) {
   [id^="neurolead"],
   .leadster-widget {
