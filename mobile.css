@@ -1,0 +1,67 @@
+/* ===========================
+   Estilos para MOBILE (≤768px)
+   =========================== */
+
+/* mostra o botão hamburger */
+.menu-toggle {
+  display: block;
+}
+
+/* esconde o menu padrão e posiciona o off‑canvas */
+nav ul {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: #222;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+/* abre o menu quando a classe .open for adicionada */
+nav ul.open {
+  display: flex;
+}
+
+nav ul li {
+  border-bottom: 1px solid #333;
+}
+
+nav ul li a {
+  display: block;
+  padding: 1rem;
+}
+
+/* empilha as seções */
+.section-row {
+  flex-direction: column;
+  text-align: center;
+}
+
+/* título menor */
+header h1 {
+  font-size: 1.4rem;
+}
+
+/* carrossel full‑width */
+.carousel img {
+  width: 100%;
+  height: auto;
+}
+
+/* representantes com largura reduzida */
+.card-rep {
+  width: 90%;
+}
+
+/* logos clientes menores */
+.logos-clientes img {
+  width: 120px;
+}
+
+/* opcional: esconde widget Leadster em telas muito pequenas */
+@media (max-width: 400px) {
+  [id^="neurolead"], .leadster-widget {
+    display: none !important;
+  }
+}
