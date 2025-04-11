@@ -36,17 +36,32 @@ nav ul li a {
 .section-row {
   flex-direction: column;
   text-align: center;
-  align-items: center; /* Garante que as imagens e textos fiquem centralizados */
+  align-items: center; /* Centraliza todo o conteúdo da linha */
+  gap: 1rem; /* Ajusta o espaçamento entre a imagem e o texto */
 }
 
-/* Ajusta o tamanho das imagens */
+/* Ajuste de tamanho para os logos */
 .company-logo,
 .brand-logo {
-  max-width: 80%; /* Ajusta o logo para se alinhar ao tamanho da tela */
+  max-width: 200px; /* Ajuste para todos os logos ficarem do mesmo tamanho */
   height: auto;
   object-fit: contain;
-  margin: 0 auto;
   display: block;
+  margin: 0 auto; /* Centraliza a imagem */
+}
+
+/* Ajuste da imagem da Dália especificamente */
+#dalia .section-row img {
+  max-width: 180px; /* Tamanho consistente da imagem no mobile */
+  height: auto;
+}
+
+/* Texto na seção Dália */
+#dalia .section-row p {
+  font-size: 1rem; /* Tamanho de texto para o mobile */
+  color: #333;
+  text-align: center;
+  margin-top: 1rem; /* Adiciona um pequeno espaçamento */
 }
 
 /* Título menor */
@@ -68,21 +83,12 @@ header h1 {
 
 /* Alinha o texto da Dália com a imagem */
 #dalia .section-row {
-  align-items: center; /* Garante alinhamento correto da imagem e texto */
-  text-align: center;
-}
-
-/* Texto da Dália */
-#dalia p {
-  margin-top: 1rem; /* Adiciona espaçamento para o texto */
-  font-size: 1rem;
-  color: #333;
-  text-align: center; /* Centraliza o texto */
+  justify-content: center; /* Garante que o conteúdo esteja centralizado */
 }
 
 /* Esconde widget Leadster em telas muito pequenas */
 @media (max-width: 400px) {
-  [id^="neurolead"],
+  [id^="neurolead"], 
   .leadster-widget {
     display: none !important;
   }
