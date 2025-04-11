@@ -1,3 +1,10 @@
+/* ========== RESET & BASE ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -6,6 +13,7 @@ body {
   color: #333;
 }
 
+/* ========== HEADER & NAV ========== */
 header {
   background-color: #222;
   color: #fff;
@@ -13,6 +21,9 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 header h1 {
@@ -20,6 +31,17 @@ header h1 {
   font-size: 1.8rem;
 }
 
+/* botão “hamburger” */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* nav padrão */
 nav ul {
   list-style: none;
   padding: 0;
@@ -32,8 +54,16 @@ nav a {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
+  padding: .4rem .6rem;
+  transition: background 0.2s;
 }
 
+nav a:hover {
+  background: rgba(255,255,255,0.1);
+  border-radius: 4px;
+}
+
+/* ========== SEÇÕES ========== */
 section {
   padding: 2rem;
   border-bottom: 1px solid #ddd;
@@ -73,7 +103,8 @@ h2 {
 }
 
 /* Logos de marcas e clientes */
-.logos, .logos-clientes {
+.logos,
+.logos-clientes {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -82,7 +113,6 @@ h2 {
   margin-top: 1rem;
 }
 
-/* Ajuste para logos das marcas (por exemplo, Best Beef e Dália) */
 .logos img {
   width: 300px;
   height: auto;
@@ -90,7 +120,6 @@ h2 {
   transition: transform 0.3s ease;
 }
 
-/* Ajuste para logos dos clientes (reducidos para metade do tamanho, exemplo: 150px de largura) */
 .logos-clientes img {
   width: 150px;
   height: auto;
@@ -109,7 +138,8 @@ form {
   margin-top: 1rem;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 0.6rem;
   margin-bottom: 1rem;
@@ -118,7 +148,8 @@ input, textarea {
   font-family: inherit;
 }
 
-button, .catalog-button {
+button,
+.catalog-button {
   background-color: #25d366;
   color: #fff;
   padding: 0.6rem 1.2rem;
@@ -186,7 +217,6 @@ button, .catalog-button {
   margin-top: 1.5rem;
 }
 
-/* Ajuste para as fotos dos representantes – Formato Redondo */
 .card-rep img {
   width: 180px;
   height: 180px;
@@ -209,6 +239,7 @@ button, .catalog-button {
 
 .card-rep:hover {
   transform: translateY(-4px);
+  transition: transform 0.2s;
 }
 
 /* Rodapé */
@@ -269,16 +300,40 @@ footer .social-icons a:hover {
   z-index: 99;
 }
 
-/* Responsivo */
-@media (max-width: 600px) {
+/* ========== MENU MOBILE ========== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  /* esconde menu padrão */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #222;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  /* mostra quando aberto */
+  nav ul.open {
+    display: flex;
+  }
+
+  nav ul li {
+    border-bottom: 1px solid #333;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 1rem;
+  }
+
   .section-row {
     flex-direction: column;
     text-align: center;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: flex-start;
   }
 
   header h1 {
@@ -296,5 +351,12 @@ footer .social-icons a:hover {
 
   .logos-clientes img {
     width: 120px;
+  }
+}
+
+/* Opcional: esconder widget em telas muito pequenas */
+@media (max-width: 400px) {
+  [id^="neurolead"], .leadster-widget {
+    display: none !important;
   }
 }
