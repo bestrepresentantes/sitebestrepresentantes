@@ -1,5 +1,5 @@
 /* ===========================
-   Estilos para MOBILE (≤768px)
+   MOBILE (≤768px)
    =========================== */
 
 /* mostra o botão hamburger */
@@ -49,19 +49,29 @@ header h1 {
   height: auto;
 }
 
-/* representantes com largura reduzida */
+/* cards de representantes mais largos e centralizados */
 .card-rep {
   width: 90%;
+  margin: 0 auto;
 }
 
-/* logos clientes menores */
-.logos-clientes img {
-  width: 120px;
+/* logos proporcionais (marcas e clientes) */
+.logos img,
+.logos-clientes img,
+.company-logo,
+.brand-logo {
+  width: auto;
+  max-width: 80%;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
 }
 
 /* opcional: esconde widget Leadster em telas muito pequenas */
 @media (max-width: 400px) {
-  [id^="neurolead"], .leadster-widget {
+  [id^="neurolead"], 
+  .leadster-widget {
     display: none !important;
   }
 }
