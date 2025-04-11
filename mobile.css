@@ -56,14 +56,14 @@ header h1 {
 }
 
 /* ===========================
-   Logos de marca (uniformes)
+   Ajustes para logos de marca (uniformes)
    =========================== */
 .company-logo,
 .brand-logo {
   display: block;
   margin: 0 auto 1rem;
   width: auto;
-  max-width: 150px;   /* todos do mesmo tamanho */
+  max-width: 180px;   /* Todos com a mesma largura, ajustado para 180px */
   height: auto;
   object-fit: contain;
 }
@@ -78,13 +78,23 @@ header h1 {
 }
 
 /* ===========================
-   Texto com mesmo alinhamento
+   Ajustes para o texto da seção Dália
    =========================== */
-.section-row > div {
-  width: auto;
-  max-width: 150px;   /* mesma largura do logo */
-  margin: 0 auto 1rem;
-  text-align: left;   /* alinha o texto como nas outras seções */
+#dalia .section-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#dalia .section-row img {
+  max-width: 180px;   /* logo da Dália com o mesmo tamanho */
+}
+
+#dalia .section-row div {
+  width: 90%;   /* largura máxima de 90% */
+  text-align: left; /* Alinha o texto à esquerda */
+  margin-top: 1rem;  /* Distância entre logo e texto */
 }
 
 /* opcional: esconde widget Leadster em telas muito pequenas */
