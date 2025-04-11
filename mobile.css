@@ -1,103 +1,90 @@
 /* ===========================
-   MOBILE (≤768px)
+   MOBILE (≤768px) - Ajustes Específicos para Android
    =========================== */
 
-/* Mostrar o botão hamburger */
-.menu-toggle {
-  display: block;
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.5;
 }
 
-/* Esconde o menu padrão e posiciona o off‑canvas */
-nav ul {
-  display: none;
-  flex-direction: column;
-  width: 100%;
-  background-color: #222;
-  position: absolute;
-  top: 100%;
-  left: 0;
+h2 {
+  font-size: 1.4rem;
+  color: #222;
 }
 
-/* Abre o menu quando a classe .open for adicionada */
-nav ul.open {
-  display: flex;
-}
-
-nav ul li {
-  border-bottom: 1px solid #333;
-}
-
-nav ul li a {
-  display: block;
-  padding: 1rem;
-}
-
-/* Empilha as seções */
 .section-row {
   flex-direction: column;
   text-align: center;
-  align-items: center; /* Alinha o conteúdo ao centro */
-  gap: 1rem; /* Garante espaçamento adequado entre os elementos */
-  padding: 0 10px; /* Adiciona algum preenchimento lateral */
+  padding: 1rem;
 }
 
-/* Ajuste de tamanho para os logos */
-.company-logo,
-.brand-logo {
-  width: 150px; /* Ajuste para o logo ter o mesmo tamanho dos outros */
-  height: auto;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto; /* Centraliza o logo */
-}
-
-/* Ajusta a imagem da Dália especificamente */
-#dalia .section-row img {
-  max-width: 150px; /* Tamanho consistente para o logo da Dália */
-  height: auto;
-  object-fit: contain;
-}
-
-/* Texto na seção Dália */
-#dalia .section-row p {
-  font-size: 1rem; /* Ajusta o tamanho do texto */
-  color: #333;
-  text-align: center;
-  margin-top: 1rem; /* Adiciona um pequeno espaçamento entre o texto e a imagem */
-}
-
-/* Ajuste para o título da seção sobre */
 header h1 {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
-/* Ajustes nos cards e logos de clientes */
-.logos img,
-.logos-clientes img {
-  width: auto;
-  max-width: 80%; /* Garante que o logo não quebre o layout */
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  background-color: #222;
+}
+
+.nav-list a {
+  font-size: 1.2rem;
+  color: #fff;
+  padding: 0.8rem 1rem;
+  text-align: center;
+  display: block;
+}
+
+.logos img {
+  max-width: 90%; /* Ajuste o logo para ser responsivo no Android */
   height: auto;
   object-fit: contain;
   margin: 0 auto;
   display: block;
 }
 
-/* Carrossel full‑width */
+.card-rep img {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+}
+
 .carousel img {
   width: 100%;
   height: auto;
 }
 
-/* Cards de representantes mais largos e centralizados */
-.card-rep {
-  width: 90%;
-  margin: 0 auto;
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #eee;
+  font-size: 1rem;
+  margin-top: 2rem;
 }
 
-/* Esconde widget Leadster em telas muito pequenas */
-@media (max-width: 400px) {
-  [id^="neurolead"], 
-  .leadster-widget {
-    display: none !important;
-  }
+footer .social-icons a {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 50px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 99;
 }
