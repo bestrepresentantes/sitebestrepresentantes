@@ -212,3 +212,74 @@ footer .social-icons a:hover {
   text-decoration: none;
   z-index: 99;
 }
+
+/* ========== RESPONSIVIDADE MOBILE (≤768px) ========== */
+@media (max-width: 768px) {
+  /* Exibe o botão hamburger */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Menu off-canvas */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #222;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+  nav ul.open {
+    display: flex;
+  }
+  nav ul li {
+    border-bottom: 1px solid #333;
+  }
+  nav ul li a {
+    display: block;
+    padding: 1rem;
+  }
+
+  /* Seções empilhadas */
+  .section-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Título menor */
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  /* Logos proporcionais */
+  .logos img,
+  .logos-clientes img,
+  .company-logo {
+    width: auto;
+    max-width: 80%;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+
+  /* Carrossel full-width */
+  .carousel img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Cards de representantes mais largos */
+  .card-rep {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* ========== ESCONDE WIDGET EM TELAS MUITO PEQUENAS ========== */
+@media (max-width: 400px) {
+  [id^="neurolead"],
+  .leadster-widget {
+    display: none !important;
+  }
+}
