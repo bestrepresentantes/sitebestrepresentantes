@@ -30,39 +30,38 @@ nav ul li {
 nav ul li a {
   display: block;
   padding: 1rem;
+  font-size: 1.2rem; /* Ajuste para tornar o texto mais legível */
 }
 
-/* Empilhar as seções e centralizar */
+/* Empilha as seções */
 .section-row {
   flex-direction: column;
   text-align: center;
-  gap: 1rem; /* Ajusta o espaçamento entre os elementos */
+  gap: 1rem;
 }
 
-/* Ajuste das imagens para ficar no mesmo tamanho */
+/* Ajuste das imagens (Logos) */
 .company-logo,
 .brand-logo {
-  width: auto;
-  max-width: 150px; /* Todos os logos terão 150px de largura */
+  max-width: 150px; /* Logo com largura limitada */
   height: auto;
   object-fit: contain;
   display: block;
-  margin: 0 auto; /* Centraliza as imagens */
+  margin: 0 auto;
 }
 
-/* Ajuste da imagem da Dália */
+/* Ajuste para a imagem da Dália na versão mobile */
 #dalia .section-row img {
-  max-width: 150px; /* A mesma largura que os outros logos */
+  max-width: 150px; /* Ajusta o tamanho da imagem da Dália */
   height: auto;
-  object-fit: contain;
 }
 
 /* Texto da seção Dália */
 #dalia .section-row p {
-  font-size: 1rem; /* Ajuste no tamanho do texto */
+  font-size: 1rem; /* Ajusta o tamanho do texto */
   color: #333;
   text-align: center;
-  margin-top: 1rem; /* Espaço entre a imagem e o texto */
+  margin-top: 1rem; /* Espaço entre o texto e a imagem */
 }
 
 /* Ajuste do título */
@@ -76,13 +75,24 @@ header h1 {
   height: auto;
 }
 
-/* Ajuste dos cards dos representantes */
+/* Ajuste dos cards de representantes */
 .card-rep {
   width: 90%;
   margin: 0 auto;
 }
 
-/* Esconde o widget Leadster em telas muito pequenas */
+/* Logos de clientes */
+.logos img,
+.logos-clientes img {
+  width: 100%; /* Garante que as imagens fiquem responsivas */
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Esconde widget Leadster em telas muito pequenas */
 @media (max-width: 400px) {
   [id^="neurolead"], 
   .leadster-widget {
