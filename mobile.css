@@ -77,9 +77,19 @@ header h1 {
   object-fit: contain;
 }
 
+/* ===========================
+   Texto com mesmo alinhamento
+   =========================== */
+.section-row > div {
+  width: auto;
+  max-width: 150px;   /* mesma largura do logo */
+  margin: 0 auto 1rem;
+  text-align: left;   /* alinha o texto como nas outras seções */
+}
+
 /* opcional: esconde widget Leadster em telas muito pequenas */
 @media (max-width: 400px) {
-  [id^="neurolead"], 
+  [id^="neurolead"],
   .leadster-widget {
     display: none !important;
   }
