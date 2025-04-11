@@ -20,12 +20,12 @@ header h1 {
   font-size: 1.8rem;
 }
 
-/* esconde o hamburger no desktop */
+/* esconde o botão hamburger no desktop */
 .menu-toggle {
   display: none;
 }
 
-/* usa a classe .nav-list */
+/* menu principal */
 .nav-list {
   list-style: none;
   padding: 0;
@@ -47,15 +47,18 @@ header h1 {
   border-radius: 4px;
 }
 
-/* garante tamanho uniforme para logos */
+/* ===========================
+   Logos unificados (desktop)
+   =========================== */
+/* Best Representantes (company-logo), Best Beef e Dália (brand-logo) */
 .company-logo,
 .brand-logo {
-  width: auto;
-  max-width: 200px;  /* ajuste conforme necessidade */
-  height: auto;
-  object-fit: contain;
   display: block;
   margin: 0 auto;
+  width: auto;
+  max-width: 300px;   /* largura máxima uniforme */
+  height: auto;
+  object-fit: contain;
 }
 
 /* SEÇÕES */
@@ -107,10 +110,9 @@ h2 {
   margin-top: 1rem;
 }
 
-/* caso ainda tenha imagens sem classes específicas */
+/* mantém hover nos logos sem classe */
 .logos img,
 .logos-clientes img {
-  object-fit: contain;
   transition: transform 0.3s ease;
 }
 
