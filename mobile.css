@@ -55,17 +55,26 @@ header h1 {
   margin: 0 auto;
 }
 
-/* logos proporcionais (marcas e clientes) */
-.logos img,
-.logos-clientes img,
+/* ===========================
+   Logos de marca (uniformes)
+   =========================== */
 .company-logo,
 .brand-logo {
+  display: block;
+  margin: 0 auto 1rem;
   width: auto;
-  max-width: 80%;
+  max-width: 150px;   /* todos do mesmo tamanho */
   height: auto;
   object-fit: contain;
-  margin: 0 auto;
+}
+
+/* logos de clientes (menores) */
+.logos-clientes img {
   display: block;
+  margin: 0 auto 1rem;
+  width: 120px;
+  height: auto;
+  object-fit: contain;
 }
 
 /* opcional: esconde widget Leadster em telas muito pequenas */
