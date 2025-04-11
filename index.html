@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-  <!-- CSS geral (reset, tipografia, cores base) -->
+  <!-- CSS geral (reset, tipografia, cores base e regras mobile originais) -->
   <link rel="stylesheet" href="style.css">
 
   <!-- CSS para desktop (≥769px) -->
@@ -17,18 +17,6 @@
 
   <!-- CSS para mobile (≤768px) -->
   <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 768px)">
-
-  <!-- Ajuste de largura uniforme para logos no mobile -->
-  <style>
-    @media screen and (max-width: 768px) {
-      .brand-logo,
-      .company-logo {
-        width: 150px;  /* mesmo tamanho para todas */
-        height: auto;
-        object-fit: contain;
-      }
-    }
-  </style>
 </head>
 <body>
 
@@ -52,7 +40,6 @@
   <section id="sobre">
     <h2>Quem Somos</h2>
     <div class="section-row">
-      <!-- Logo da empresa -->
       <img src="logo-bestrepresentantes.png" alt="Logo Best Representantes" class="company-logo">
       <p>A <strong>Best Representantes</strong> é um escritório especializado na representação comercial de marcas do segmento de proteínas, com foco em bovinos e suínos. Com mais de 30 anos de experiência, liderado por <strong>Teo Edelstein</strong>, nosso compromisso é conectar fornecedores a clientes de alto potencial em Porto Alegre e região metropolitana.</p>
     </div>
@@ -72,7 +59,6 @@
   <section id="marcas">
     <h2>Marcas Representadas</h2>
     <div class="logos">
-      <!-- Logos das marcas com classe unificada -->
       <img src="bestbeef.png.png" alt="Best Beef" class="brand-logo">
       <img src="imagem-dalia.png" alt="Dália Alimentos" class="brand-logo">
     </div>
@@ -100,7 +86,7 @@
     </div>
   </section>
 
-  <!-- resto do conteúdo permanece inalterado -->
+  <!-- resto do conteúdo permanece igual -->
 
   <!-- Toggle do menu mobile -->
   <script>
