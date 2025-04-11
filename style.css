@@ -7,78 +7,28 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
   background-color: #f9f9f9;
   color: #333;
+  line-height: 1.5;
 }
 
-/* ========== HEADER & NAV ========== */
-header {
-  background-color: #222;
-  color: #fff;
-  padding: 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 1.8rem;
-}
-
-/* botão “hamburger” */
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 1.8rem;
-  cursor: pointer;
-}
-
-/* nav padrão */
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 1.5rem;
-  margin-top: 0.5rem;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  padding: .4rem .6rem;
-  transition: background 0.2s;
-}
-
-nav a:hover {
-  background: rgba(255,255,255,0.1);
-  border-radius: 4px;
-}
-
-/* ========== SEÇÕES ========== */
-section {
-  padding: 2rem;
-  border-bottom: 1px solid #ddd;
-  background-color: #fff;
-}
-
+/* Tipografia */
 h2 {
-  margin-top: 0;
   font-size: 1.6rem;
   color: #222;
   border-left: 6px solid #25d366;
   padding-left: 0.6rem;
+  margin-bottom: 1rem;
 }
 
-/* Sobre / Best Beef / Dália */
+/* Seções */
+section {
+  padding: 2rem;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Layout geral de linhas */
 .section-row {
   display: flex;
   flex-wrap: wrap;
@@ -86,23 +36,21 @@ h2 {
   gap: 2rem;
 }
 
-/* Diferenciais */
+/* Cards e grids */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1rem;
   margin-top: 1rem;
 }
-
 .card {
   background-color: #f0f0f0;
   padding: 1.2rem;
   border-radius: 8px;
-  font-size: 1rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-/* Logos de marcas e clientes */
+/* Logos */
 .logos,
 .logos-clientes {
   display: flex;
@@ -112,21 +60,11 @@ h2 {
   align-items: center;
   margin-top: 1rem;
 }
-
-.logos img {
-  width: 300px;
-  height: auto;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
+.logos img,
 .logos-clientes img {
-  width: 150px;
-  height: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
-
 .logos img:hover,
 .logos-clientes img:hover {
   transform: scale(1.05);
@@ -137,19 +75,14 @@ form {
   max-width: 400px;
   margin-top: 1rem;
 }
-
-input,
-textarea {
+input, textarea {
   width: 100%;
   padding: 0.6rem;
   margin-bottom: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-family: inherit;
 }
-
-button,
-.catalog-button {
+button, .catalog-button {
   background-color: #25d366;
   color: #fff;
   padding: 0.6rem 1.2rem;
@@ -157,13 +90,9 @@ button,
   border-radius: 5px;
   cursor: pointer;
   font-weight: 500;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 0.5rem;
   transition: background-color 0.3s ease;
 }
-
-.catalog-button:hover {
+button:hover, .catalog-button:hover {
   background-color: #1da955;
 }
 
@@ -174,29 +103,26 @@ button,
   scroll-snap-type: x mandatory;
   gap: 1rem;
   padding: 1rem 0;
-  scroll-behavior: smooth;
 }
-
 .carousel img {
+  flex: 0 0 auto;
   width: 300px;
+  height: 200px;
+  object-fit: cover;
   border-radius: 8px;
   scroll-snap-align: start;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  flex: 0 0 auto;
   transition: transform 0.3s ease;
-  object-fit: cover;
-  height: 200px;
   loading: lazy;
 }
-
 .carousel img:hover {
   transform: scale(1.03);
 }
 
 /* Vídeo */
 #video video {
-  max-width: 720px;
   width: 100%;
+  max-width: 720px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   margin-top: 1rem;
@@ -208,7 +134,6 @@ button,
   background-color: #fff;
   text-align: center;
 }
-
 .representantes {
   display: flex;
   flex-wrap: wrap;
@@ -216,7 +141,6 @@ button,
   gap: 2rem;
   margin-top: 1.5rem;
 }
-
 .card-rep img {
   width: 180px;
   height: 180px;
@@ -225,18 +149,15 @@ button,
   margin: 0 auto 1rem;
   display: block;
 }
-
 .card-rep h3 {
   font-size: 1rem;
-  margin: 0.4rem 0 0.2rem;
   color: #222;
+  margin-bottom: 0.2rem;
 }
-
 .card-rep p {
   font-size: 0.85rem;
   color: #555;
 }
-
 .card-rep:hover {
   transform: translateY(-4px);
   transition: transform 0.2s;
@@ -253,110 +174,41 @@ footer {
   gap: 0.5rem;
   align-items: center;
 }
-
 footer .social-icons {
   display: flex;
   gap: 1rem;
-  margin-top: 0.5rem;
 }
-
 footer .social-icons a {
   color: #333;
   font-size: 1.2rem;
-  text-decoration: none;
   transition: color 0.3s;
 }
-
 footer .social-icons a:hover {
   color: #25d366;
 }
-
 .download-button {
   background-color: #007BFF;
   color: #fff;
   padding: 0.6rem 1.2rem;
   border-radius: 5px;
-  text-decoration: none;
   font-weight: 500;
   transition: background-color 0.3s ease;
 }
-
 .download-button:hover {
   background-color: #005dc1;
 }
 
-/* Botão flutuante WhatsApp */
+/* WhatsApp flutuante */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background-color: #25d366;
-  color: white;
+  color: #fff;
   padding: 10px 16px;
   border-radius: 50px;
-  text-decoration: none;
   font-weight: bold;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  text-decoration: none;
   z-index: 99;
-}
-
-/* ========== MENU MOBILE ========== */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  /* esconde menu padrão */
-  nav ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #222;
-    position: absolute;
-    top: 100%;
-    left: 0;
-  }
-
-  /* mostra quando aberto */
-  nav ul.open {
-    display: flex;
-  }
-
-  nav ul li {
-    border-bottom: 1px solid #333;
-  }
-
-  nav ul li a {
-    display: block;
-    padding: 1rem;
-  }
-
-  .section-row {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  header h1 {
-    font-size: 1.4rem;
-  }
-
-  .carousel img {
-    width: 100%;
-    height: auto;
-  }
-
-  .card-rep {
-    width: 90%;
-  }
-
-  .logos-clientes img {
-    width: 120px;
-  }
-}
-
-/* Opcional: esconder widget em telas muito pequenas */
-@media (max-width: 400px) {
-  [id^="neurolead"], .leadster-widget {
-    display: none !important;
-  }
 }
