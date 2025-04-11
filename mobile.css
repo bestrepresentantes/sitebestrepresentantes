@@ -50,9 +50,8 @@ nav ul li a {
   margin: 0 auto;
 }
 
-/* Ajuste o tamanho do logo da Dália */
 #dalia .brand-logo {
-  max-width: 150px;  /* Ajuste para o logo da Dália com o mesmo tamanho dos outros logos */
+  max-width: 200px;  /* Ajuste esse valor conforme necessário */
   height: auto;
   object-fit: contain;
   display: block;
