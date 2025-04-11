@@ -1,0 +1,279 @@
+/* ===========================
+   Estilos para DESKTOP (≥769px)
+   =========================== */
+
+/* HEADER & NAV */
+header {
+  background-color: #222;
+  color: #fff;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: .4rem .6rem;
+  transition: background 0.2s;
+}
+
+nav a:hover {
+  background: rgba(255,255,255,0.1);
+  border-radius: 4px;
+}
+
+/* SEÇÕES */
+section {
+  padding: 2rem;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: #222;
+  border-left: 6px solid #25d366;
+  padding-left: 0.6rem;
+}
+
+.section-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* DIFERENCIAIS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background-color: #f0f0f0;
+  padding: 1.2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* LOGOS */
+.logos,
+.logos-clientes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.logos img {
+  width: 300px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logos-clientes img {
+  width: 150px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logos img:hover,
+.logos-clientes img:hover {
+  transform: scale(1.05);
+}
+
+/* FORMULÁRIO */
+form {
+  max-width: 400px;
+  margin-top: 1rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+button,
+.catalog-button {
+  background-color: #25d366;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.catalog-button:hover {
+  background-color: #1da955;
+}
+
+/* CARROSSEL */
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  padding: 1rem 0;
+  scroll-behavior: smooth;
+}
+
+.carousel img {
+  width: 300px;
+  border-radius: 8px;
+  scroll-snap-align: start;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  flex: 0 0 auto;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+  height: 200px;
+}
+
+.carousel img:hover {
+  transform: scale(1.03);
+}
+
+/* VÍDEO */
+#video video {
+  max-width: 720px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-top: 1rem;
+}
+
+/* REPRESENTANTES */
+#representantes {
+  padding: 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.representantes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.card-rep img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+.card-rep h3 {
+  font-size: 1rem;
+  margin: 0.4rem 0 0.2rem;
+  color: #222;
+}
+
+.card-rep p {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.card-rep:hover {
+  transform: translateY(-4px);
+  transition: transform 0.2s;
+}
+
+/* RODAPÉ */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #eee;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+footer .social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+footer .social-icons a {
+  color: #333;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer .social-icons a:hover {
+  color: #25d366;
+}
+
+.download-button {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #005dc1;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 99;
+}
